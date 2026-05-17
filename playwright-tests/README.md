@@ -2,6 +2,54 @@
 
 This project is an enterprise-grade automated security testing framework built with [Playwright](https://playwright.dev/). It is designed to evaluate web applications (specifically targeting vulnerable applications like OWASP Juice Shop) for severe security vulnerabilities without modifying the actual business logic or relying on cumbersome, duplicated code.
 
+## 🚀 Quick Start / Installation
+
+Follow these steps to set up the vulnerable target (Juice Shop) and execute the Playwright security framework against it.
+
+### Step 1: Set up OWASP Juice Shop
+The tests are specifically designed to run against a local instance of OWASP Juice Shop running on port 3000.
+```bash
+# Clone the Juice Shop repository
+git clone https://github.com/juice-shop/juice-shop.git
+
+# Navigate into the directory
+cd juice-shop
+
+# Install dependencies
+npm install
+
+# Start the application
+npm start
+```
+*Juice Shop should now be running at `http://localhost:3000`.*
+
+### Step 2: Set up the Playwright Framework
+Open a **new terminal window** and navigate to this testing framework directory.
+```bash
+# Navigate to the playwright testing framework
+cd playwright-tests
+
+# Install dependencies
+npm install
+
+# Install Playwright browsers
+npx playwright install
+```
+
+### Step 3: Run the Security Tests
+With Juice Shop running in the background, you can now trigger the security scans.
+```bash
+# Run all security tests across all vectors
+npx playwright test
+
+# To run a specific category (e.g. DOM XSS only)
+npx playwright test -g "DOM XSS"
+
+# To view the visual HTML report after execution
+npx playwright show-report
+```
+
+---
 ## 🏗️ Project Flow & Architecture
 
 The framework is structured using the **Page Object Model (POM)** pattern to maximize scalability, maintainability, and reusability. 
