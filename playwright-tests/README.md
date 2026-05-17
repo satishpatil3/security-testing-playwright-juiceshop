@@ -131,39 +131,39 @@ Below is the output log mapped into tables for each of the core security categor
 **Total Cookies Scanned:** 33  
 **Strict-Transport-Security (HSTS):** NOT FOUND
 
-| Cookie Name | Security Issues Detected |
-| :--- | :--- |
-| `aws-waf-token` | Missing HttpOnly |
-| `session-id` | Missing HttpOnly |
-| `session-id-time` | Missing HttpOnly |
-| `i18n-prefs` | Missing HttpOnly, Missing Secure |
-| `lc-acbin` | Missing HttpOnly, Missing Secure |
-| `csm-hit` | Missing HttpOnly, Missing Secure |
-| `rxc` | Missing HttpOnly, Missing Secure |
-| `ad-id` | SameSite=None |
-| `ad-privacy` | SameSite=None |
-| `__bpn_uid` | Missing HttpOnly, SameSite=None |
-| `__ur_dc` | Missing HttpOnly, SameSite=None |
-| `__bpn_puid` | Missing HttpOnly, SameSite=None |
-| `pid` | Missing HttpOnly, SameSite=None |
-| `TestIfCookieP` | Missing HttpOnly, SameSite=None |
-| `CMID` | Missing HttpOnly, SameSite=None |
-| `CMPS` | Missing HttpOnly, SameSite=None |
-| `CMPRO` | Missing HttpOnly, SameSite=None |
-| `tuuid` | SameSite=None *(2 instances)* |
-| `tuuid_lu` | SameSite=None *(2 instances)* |
-| `XANDR_PANID` | Missing HttpOnly, SameSite=None |
-| `uuid2` | SameSite=None |
-| `cnx_userId` | Missing HttpOnly, SameSite=None |
-| `um` | SameSite=None |
-| `umeh` | SameSite=None |
-| `c` | Missing HttpOnly, SameSite=None |
-| `anj` | SameSite=None |
-| `AFFICHE_W` | Missing HttpOnly, SameSite=None |
-| `uids` | SameSite=None |
-| `cids` | SameSite=None |
-| `zc` | Missing HttpOnly, SameSite=None |
-| `csync` | Missing HttpOnly, SameSite=None |
+| Cookie Name | HttpOnly | Secure | SameSite |
+| :--- | :---: | :---: | :---: |
+| `aws-waf-token` | ❌ | ✅ | Lax |
+| `session-id` | ❌ | ✅ | Lax |
+| `session-id-time` | ❌ | ✅ | Lax |
+| `i18n-prefs` | ❌ | ❌ | Lax |
+| `lc-acbin` | ❌ | ❌ | Lax |
+| `csm-hit` | ❌ | ❌ | Lax |
+| `rxc` | ❌ | ❌ | Lax |
+| `ad-id` | ✅ | ✅ | None |
+| `ad-privacy` | ✅ | ✅ | None |
+| `__bpn_uid` | ❌ | ✅ | None |
+| `__ur_dc` | ❌ | ✅ | None |
+| `__bpn_puid` | ❌ | ✅ | None |
+| `pid` | ❌ | ✅ | None |
+| `TestIfCookieP` | ❌ | ✅ | None |
+| `CMID` | ❌ | ✅ | None |
+| `CMPS` | ❌ | ✅ | None |
+| `CMPRO` | ❌ | ✅ | None |
+| `tuuid` *(2 instances)* | ✅ | ✅ | None |
+| `tuuid_lu` *(2 instances)* | ✅ | ✅ | None |
+| `XANDR_PANID` | ❌ | ✅ | None |
+| `uuid2` | ✅ | ✅ | None |
+| `cnx_userId` | ❌ | ✅ | None |
+| `um` | ✅ | ✅ | None |
+| `umeh` | ✅ | ✅ | None |
+| `c` | ❌ | ✅ | None |
+| `anj` | ✅ | ✅ | None |
+| `AFFICHE_W` | ❌ | ✅ | None |
+| `uids` | ✅ | ✅ | None |
+| `cids` | ✅ | ✅ | None |
+| `zc` | ❌ | ✅ | None |
+| `csync` | ❌ | ✅ | None |
 
 ---
 
